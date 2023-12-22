@@ -1,0 +1,37 @@
+<div class="container mx-auto">
+    <h3>About Me</h3>
+    <mgl-timeline [alternate]=false side="right">
+        <span>2006-2018</span>
+        <mgl-timeline-entry>
+            <mgl-timeline-entry-header>Newcaslte University</mgl-timeline-entry-header>
+            <mgl-timeline-entry-content>First in Information Systems</mgl-timeline-entry-content>
+            <mgl-timeline-entry-dot
+            class="primary"
+            [size]="size"
+            (click)="onDotClick($event)"
+            [expandAnimationTiming]="dotAnimation ? '200ms ease' : '0ms'"
+            [collapseAnimationTiming]="dotAnimation ? '100ms ease' : '0ms'"
+          ></mgl-timeline-entry-dot>
+            <mgl-timeline-entry-side>2006 - 2010</mgl-timeline-entry-side>
+        </mgl-timeline-entry>
+        <span>2006-2018</span>
+        <mgl-timeline-entry>
+            <mgl-timeline-entry-header>IBM</mgl-timeline-entry-header>
+            <mgl-timeline-entry-content>Content</mgl-timeline-entry-content>
+            <mgl-timeline-entry-dot></mgl-timeline-entry-dot>
+            <mgl-timeline-entry-side>2010 - 2016</mgl-timeline-entry-side>
+        </mgl-timeline-entry>
+        <mgl-timeline-entry>
+            <mgl-timeline-entry-header>Biglight</mgl-timeline-entry-header>
+            <mgl-timeline-entry-content>Content</mgl-timeline-entry-content>
+            <mgl-timeline-entry-dot></mgl-timeline-entry-dot>
+            <mgl-timeline-entry-side>2016 - 2022</mgl-timeline-entry-side>
+        </mgl-timeline-entry>
+        <mgl-timeline-entry>
+            <mgl-timeline-entry-header>Virgin Media</mgl-timeline-entry-header>
+            <mgl-timeline-entry-content>Content</mgl-timeline-entry-content>
+            <mgl-timeline-entry-dot></mgl-timeline-entry-dot>
+            <mgl-timeline-entry-side>2022 - Present</mgl-timeline-entry-side>
+        </mgl-timeline-entry>
+    </mgl-timeline>   
+</div>

@@ -1,0 +1,41 @@
+:host
+  padding-top: 60px
+  background-color: white
+  display: block
+  min-height: 400px
+  position: relative
+  &::before
+    content: ''
+    height: 150px
+    background-color: #3f54f7
+    display: block
+    position: absolute
+    top: 0
+    width: 100%
+
+  > div
+    width: 80%
+    border-radius: 10px
+    background: white
+    position: relative
+    min-height: 400px
+    box-shadow: 6px 8px 41px -7px grey
+    > div
+      width: 33%
+      align-items: center
+      padding: 40px 20px
+      mat-icon
+        height: 60px
+        width: 60px
+        font-size: 60px
+        margin-bottom: 40px
+
+      h4
+        font-size: 24px
+        font-family: Inconsolata
+        font-weight: bold
+
+      ul
+        text-align: center
+        li
+          line-height: 2

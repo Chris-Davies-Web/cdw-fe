@@ -1,0 +1,170 @@
+@mixin small-desktop
+  @media screen and (max-width: 1300px)
+    @content
+
+@mixin tablet
+  @media screen and (max-width: 1024px)
+    @content
+
+@mixin mobile
+  @media screen and (max-width: 767px)
+    @content
+
+:host
+  background-color: #3f54f7
+  display: block
+  .hero
+    background-color: #3f54f7
+    > div
+      display: flex
+      margin: 0 50px
+      @include tablet
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    h1
+      font-family: Inconsolata
+      font-size: 40px
+      margin: 10px 0 50px 0
+      @include small-desktop
+        font-size: 34px
+
+      @include tablet
+        text-align: center
+
+      @include mobile
+        font-size: 24px
+
+    img
+      width: 350px
+      height: fit-content
+      margin-bottom: 20px
+      box-shadow: -4px 3px 0px #ffee37
+      border-radius: 50px
+      margin-right: 20px
+      @include small-desktop
+        width: 250px
+
+      @include mobile
+        width: 150px
+
+    *
+      color: white
+
+    .description
+      margin-top: 50px
+      text-align: left
+      @include small-desktop
+        font-size: 18px
+
+      @include tablet
+        text-align: center
+
+      @include mobile
+        font-size: 16px
+
+    p.animation
+      display: block
+      text-align: left
+      line-height: 1.6
+      white-space: nowrap
+      @include small-desktop
+        font-size: 24px
+
+      @include tablet
+        text-align: center
+
+      @include mobile
+        white-space: inherit
+        font-size: 16px
+
+      .fade-text
+        opacity: 0
+        display: inline-block
+        position: relative
+        animation: fade 4s linear infinite
+        color: #ffee37
+
+    .cta
+      margin: 50px
+      display: flex
+      flex-direction: column
+      position: relative
+      &::before
+        content: ""
+        width: 100px
+        height: 1px
+        background-color: #ffee37
+        top: -30px
+        left: 0
+        right: 0
+        margin: auto
+        position: absolute
+
+      .btn-flip
+        margin-top: 40px
+        opacity: 1
+        outline: 0
+        color: #fff
+        line-height: 50px
+        position: relative
+        text-align: center
+        letter-spacing: 1px
+        display: inline-block
+        text-decoration: none
+        text-transform: uppercase
+        font-size: 16px
+        &:hover
+          &:after
+            opacity: 1
+            transform: translateY(0) rotateX(0)
+
+          &:before
+            opacity: 0
+            transform: translateY(50%) rotateX(90deg)
+
+        &:after
+          top: 0
+          left: 0
+          opacity: 0
+          width: 100%
+          color: #3f54f7
+          display: block
+          transition: 0.5s
+          position: absolute
+          background: #ffee37
+          content: attr(data-back)
+          transform: translateY(-50%) rotateX(90deg)
+
+        &:before
+          top: 0
+          left: 0
+          opacity: 1
+          color: white
+          display: block
+          padding: 0 40px
+          line-height: 50px
+          transition: 0.5s
+          position: relative
+          background: transparent
+          border: solid 1px #ffee37
+          content: attr(data-front)
+          transform: translateY(0) rotateX(0)
+
+@keyframes fade
+  0%
+    opacity: 0
+    transform: translateY(-20px)
+
+  25%
+    opacity: 1
+    transform: translateY(0)
+
+  75%
+    opacity: 1
+    transform: translateY(0)
+
+  100%
+    opacity: 0
+    transform: translateY(20px)

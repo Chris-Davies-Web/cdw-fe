@@ -1,0 +1,44 @@
+<div class="container mx-auto flex justify-around">
+  <ng-template
+    ngFor
+    let-blob
+    let-i="index"
+    [ngForOf]="response.data.attributes.info_blob"
+  >
+    <div class="flex flex-col">
+      <mat-icon>{{ blob.mat_icon_name }}</mat-icon>
+      <h4 class="text-xl">{{ blob.header }}</h4>
+      <div class="description">
+        {{ blob.description }}
+      </div>
+    </div>
+  </ng-template>
+  <!-- <div class="flex flex-col">
+        <mat-icon>monitoring</mat-icon>
+        <h4 class="text-xl">What is CRO?</h4>
+        <ul>
+            <li>A/B/n</li>
+            <li>Mutli-variant</li>
+            <li>Others: Multi-armed Bandit / Stats Accelerator</li>
+        </ul>
+    </div> -->
+  <!-- <div class="flex flex-col">
+        <mat-icon>monitoring</mat-icon>
+        <h4 class="text-xl">Why I love CRO!</h4>
+        <ul>
+            <li>Build confidence in features</li>
+            <li>Iterate over tests</li>
+            <li>Be Dynamic</li>
+        </ul> -->
+  <!-- </div>
+   
+    <div class="flex flex-col">
+        <mat-icon>monitoring</mat-icon>
+        <h4 class="text-xl">Why do CRO?</h4>
+        <ul>
+            <li>Build confidence in features</li>
+            <li>Iterate over tests</li>
+            <li>Be Dynamic</li>
+        </ul>
+    </div> -->
+</div>

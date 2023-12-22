@@ -1,0 +1,31 @@
+<section class="hero pt-10 flex flex-col items-center container mx-auto">
+  <div>
+    <img [src]="image" />
+    <div class="animated-text-scroller font-inconsolata text-3xl">
+      <h1>{{ response.data.attributes.Header }}</h1>
+      <p class="animation">
+        {{ response.data.attributes.start_of_sentence }}
+        <span class="fade-text">{{ activeSlideOne }}</span>
+        {{ response.data.attributes.mid_sentence }}
+        <span class="fade-text">{{ activeSlideTwo }}</span>
+      </p>
+      <p class="description font-grotesk font-thin text-xl">
+        {{ response.data.attributes.Description }}
+      </p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <!-- <a
+      href="#"
+      class="btn-flip font-inconsolata"
+      data-back="CRO Developer.com"
+      data-front="Find my hints and tips at"
+    ></a> -->
+    <a
+      [href]="response.data.attributes.heroCTA[0].link"
+      class="btn-flip font-inconsolata"
+      >{{ response.data.attributes.heroCTA[0].label }}</a
+    >
+  </div>
+</section>

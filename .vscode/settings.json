@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.enableDebugLogs": true,
+  "html.format.indentInnerHtml": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {},
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[sass]": {
+    "editor.defaultFormatter": "syler.sass-indented"
+  }
+}
